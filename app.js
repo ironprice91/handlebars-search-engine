@@ -9,6 +9,7 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.get('/', indexController.index);
+app.get('/search', indexController.search);
 
 var server = app.listen(7797, function() {
 	console.log('Express server listening on port ' + server.address().port);
