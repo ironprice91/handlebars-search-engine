@@ -6,14 +6,11 @@ html(lang='en')
 
 	body
 		block content
-	
 	script(src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js")
 	script(src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js")
 	script(src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js")
 	script(src="/scripts/main.js")
-	script(src="../models/search-data.json")
 
 	script(id="search-results" type="text/x-handlebars-template")
-			li
-				h6.language
-					{{programming}}
+		li(class="program-language" data-id="{{@key}}")
+			h6 {{programming}}
